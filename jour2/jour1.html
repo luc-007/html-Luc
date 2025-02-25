@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jour2</title>
+    <style>
+        section{
+            background-color: #f2f2f2;
+            height: 200px;
+        }
+        .carre{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 2px;
+        }
+
+        .cercle{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 2px;
+            border-radius: 50%;
+        }
+
+        .other{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 2px;
+            border-radius: 50px 0 50px 0;
+        }
+
+        section:nth-child(3) :nth-child(2) div:nth-child(2){
+            background-color: pink;
+            border-bottom: 3px solid black;
+        }
+
+        section:nth-child(2) div:nth-child(2) div:nth-child(2){
+            background-color: pink;
+            border-bottom: 3px solid black;
+        }
+
+        section:first-child div:nth-child(2) div:nth-child(2){
+            background-color: pink;
+            border-bottom: 3px solid black;
+        }
+
+        section:first-child div:nth-child(2){
+            display:flex;
+            justify-content: space-between;
+        }
+
+        section:first-child div:nth-child(2) div:nth-child(1){
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
+
+        section:nth-child(3) div:nth-child(2) div:nth-child(3) {
+            background-image: url("img1.png");
+            background-size: cover;
+        }
+
+        section:nth-child(2) div:nth-child(2) {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        section:nth-child(3) div:nth-child(2) {
+            display: flex;
+            justify-content: space-around;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h4>display:flex; justify-content:space-around;</h4>
+        </div>
+        <div>
+            <div class="carre"></div>
+            <div class="carre"></div>
+            <div class="carre"></div>
+        </div>
+    
+    </section>
+
+    <section>
+        <div>
+            <h4>display:flex; justify-content:space-around;</h4>
+        </div>
+        <div>
+            <div class="cercle"></div>
+            <div class="cercle"></div>
+            <div class="cercle"></div>
+        </div>
+    
+    </section>
+
+    <section>
+        <div>
+            <h4>display:flex; justify-content:space-around;</h4>
+        </div>
+        <div>
+            <div class="other"></div>
+            <div class="other"></div>
+            <div class="other"><img src="img1.png" alt="img1"></div>
+        </div>
+    
+    </section>
+</body>
+</html>
