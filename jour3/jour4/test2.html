@@ -6,7 +6,7 @@
     <title>To-Do List</title>
     <style>
         .container {
-            max-width: 400px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
@@ -15,14 +15,14 @@
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #f8a305ec;
         }
         .list {
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
         }
-        select {
+        input {
             flex-grow: 1;
             padding: 10px;
             border: 1px solid #ccc;
@@ -69,15 +69,10 @@
 <body>
     <div class="container">
         <div>
-            <label for="choix"><h1>To-Do List:</h1></label>
+            <label for="taskInput"><h1>To-Do List:</h1></label>
         </div>
         <div class="list">
-            <select id="choix" name="choix">
-                <option value="option1">Manger</option>
-                <option value="option2">Dormir</option>
-                <option value="option3">Jouer</option>
-                <option value="option4">Danser</option>
-            </select>
+            <input type="text" id="taskInput" placeholder="Entrez une tâche...">
             <button id="addButton">ADD</button>
         </div>
         <ul id="taskList"></ul>
@@ -85,32 +80,47 @@
 
     <script>
         // Récupérer les éléments du DOM
-        const select = document.getElementById('choix');
+        const taskInput = document.getElementById('taskInput');
         const addButton = document.getElementById('addButton');
         const taskList = document.getElementById('taskList');
 
         // Ajouter un écouteur d'événement sur le bouton "ADD"
         addButton.addEventListener('click', () => {
-            // Récupérer l'option sélectionnée
-            const selectedOption = select.options[select.selectedIndex];
-            const taskText = selectedOption.text;
+            // Récupérer la valeur saisie par l'utilisateur
+            const taskText = taskInput.value.trim();
 
-            // Créer un nouvel élément de liste
-            const listItem = document.createElement('li');
-            listItem.textContent = taskText;
+            // Vérifier si le champ n'est pas vide
+            if (taskText !== "") {
+                // Créer un nouvel élément de liste
+                const listItem = document.createElement('li');
+                listItem.textContent = taskText;
 
-            // Ajouter un bouton de suppression
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Supprimer';
-            deleteButton.addEventListener('click', () => {
-                taskList.removeChild(listItem); // Supprimer l'élément de la liste
-            });
+                // Ajouter un bouton de suppression
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Supprimer';
+                deleteButton.addEventListener('click', () => {
+                    taskList.removeChild(listItem); // Supprimer l'élément de la liste
+                });
 
-            // Ajouter le bouton de suppression à l'élément de liste
-            listItem.appendChild(deleteButton);
+                // Ajouter le bouton de suppression à l'élément de liste
+                listItem.appendChild(deleteButton);
 
-            // Ajouter l'élément de liste à la liste à puce
-            taskList.appendChild(listItem);
+                // Ajouter l'élément de liste à la liste à puce
+                taskList.appendChild(listItem);
+
+                // Vider le champ de saisie
+                taskInput.value = "";
+            } else {
+                // Afficher une alerte si le champ est vide
+                alert("Veuillez entrer une tâche !");
+            }
+        });
+
+        // Permettre d'ajouter une tâche en appuyant sur "Entrée"
+        taskInput.addEventListener('keypress', (event) => {
+            if (event.key === "Enter") {
+                addButton.click(); // Simuler un clic sur le bouton "ADD"
+            }
         });
     </script>
 </body>

@@ -27,11 +27,20 @@
                 <option value="option3">jouer</option>
                 <option value="option4">Danser</option>
             </select>
-            <button>ADD</button>
+            <button id="addButton">ADD</button>
         </div>
+        <ul id="taskList"></ul>
     </div>
     <script>
         
+        const select = document.getElementById('choix');
+        const addButton = document.getElementById('button');
+        const taskList = document.getElementById("taskList");
+
+        addButton.addEventListener("click"),() =>{
+            const selectedOption = select.options[select.selectedIndex];
+        }
+
     </script>
 </body>
 </html>
