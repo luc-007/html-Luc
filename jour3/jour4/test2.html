@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .list {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        select {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li button {
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        li button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label for="choix"><h1>To-Do List:</h1></label>
+        </div>
+        <div class="list">
+            <select id="choix" name="choix">
+                <option value="option1">Manger</option>
+                <option value="option2">Dormir</option>
+                <option value="option3">Jouer</option>
+                <option value="option4">Danser</option>
+            </select>
+            <button id="addButton">ADD</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        // Récupérer les éléments du DOM
+        const select = document.getElementById('choix');
+        const addButton = document.getElementById('addButton');
+        const taskList = document.getElementById('taskList');
+
+        // Ajouter un écouteur d'événement sur le bouton "ADD"
+        addButton.addEventListener('click', () => {
+            // Récupérer l'option sélectionnée
+            const selectedOption = select.options[select.selectedIndex];
+            const taskText = selectedOption.text;
+
+            // Créer un nouvel élément de liste
+            const listItem = document.createElement('li');
+            listItem.textContent = taskText;
+
+            // Ajouter un bouton de suppression
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Supprimer';
+            deleteButton.addEventListener('click', () => {
+                taskList.removeChild(listItem); // Supprimer l'élément de la liste
+            });
+
+            // Ajouter le bouton de suppression à l'élément de liste
+            listItem.appendChild(deleteButton);
+
+            // Ajouter l'élément de liste à la liste à puce
+            taskList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

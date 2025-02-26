@@ -7,13 +7,110 @@
     <title>projet js</title>
 </head>
 <body>
-    
+    <header id="idHeader">
+        <h1>HELLO</h1>
+        <span class="classname">
+            test
+        </span>
+    </header>
+        
     <script>
         const variable1 = "bonjour"
         let variable2 = "pas constant"
         let character = "string"
         let number = 1234
         let boole = true
+
+        let var1 = "luc"
+        let var2 = ""
+        // on fait Boollean non de la var pour voir si ca contient un élément:
+        // on fait nom de la variable.length pour voir la longuer de la variable dans la console:
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i)
+        }
+
+        //pour parcourir ls différents élément d'une variable et aficher chaque élément:
+        for (let i = 0 ; i < variable2.length; i++) {
+            console.log(variable2[i])
+        }
+        // pour afficher les éléments d'un tableau:
+        const tableau = [
+        "hello",
+        1234,
+        "world",
+        undefined
+        ]
+
+        for (let i=0; i < tableau.length; i++) {
+           // console.log(tableau[i]):
+
+            //pour afficher le type des variables:
+            console.log(typeof tableau[i])
+            if (typeof tableau[i] === "String"){
+                console.log(tableau[i])
+            }
+            else if (typeof tableau[i] === "number"){
+                console.log("c'est un nombre")
+            }
+            
+        }
+        //on tape obj1(exple) pour afficher les information de obj1 et obj1.ins1 pour afficher les éléments de ins1
+        const obj1 = ["Ho","He"]
+        const obj2 = {
+            ins1: "string",
+            ins2:123,
+            ins3:["hello", "world"],
+            ins4:{
+                name:"XYZ",
+                url:"#",
+            },
+            ins5:function () { console.log("HI! I am a function") },
+            ins6: [
+            {
+                ins1:123,
+                ins2:"",
+                ins3: function(){},
+                ins4: ["", null, variable1]
+            }
+            ]
+        } 
+
+        function sum(x, y){
+            return x + y
+        }
+
+        function sous(x, y){
+            return x - y
+        }
+
+        function multi(x, y){
+            return x * y
+        }
+
+        function div(x, y){
+            return x / y
+        }
+        //on fait tab2.push("valeur")pour ajouter une nouvelle valleur à la au tableau (tab2) et on fait tab2 pour afficher
+        const tab2 = []
+
+        //get element
+
+        const header = document.getElementById("idHeader")
+        const span = document.getElementsByClassName("classname")
+        const h1 = document.getElementsByTagName("h1")
+
+        //appelé un Id
+        function couleur(){
+            const element = document.getElementById("idHeader")
+            element.style.color = "red"
+        }
+        //appelé une tag
+        function couleur2(){
+            const element = document.querySelector("h1")
+            element.style.color = "blue"
+        }
     </script>
+
 </body>
 </html>
