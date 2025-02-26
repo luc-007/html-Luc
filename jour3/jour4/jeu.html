@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de mémoire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .game-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .color-button {
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        .color-button:hover {
+            opacity: 1;
+        }
+        .color-button[data-color="red"] {
+            background-color: #ff4d4d;
+        }
+        .color-button[data-color="blue"] {
+            background-color: #4d79ff;
+        }
+        .color-button[data-color="green"] {
+            background-color: #4dff4d;
+        }
+        .color-button[data-color="yellow"] {
+            background-color: #ffff4d;
+        }
+        .score {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #333;
+        }
+        .message {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jeu de mémoire</h1>
+        <div class="buttons">
+            <button class="color-button" data-color="red"></button>
+            <button class="color-button" data-color="blue"></button>
+            <button class="color-button" data-color="green"></button>
+            <button class="color-button" data-color="yellow"></button>
+        </div>
+        <div class="score" id="scoreDisplay">Score : 0</div>
+        <div class="message" id="messageDisplay"></div>
+    </div>
+
+    <script>
+        // Éléments du DOM
+        const buttons = document.querySelectorAll('.color-button');
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const messageDisplay = document.getElementById('messageDisplay');
+
+        // Variables du jeu
+        let sequence = [];
+        let playerSequence = [];
+        let score = 0;
+        let isDisplayingSequence = false;
+
+        // Démarrer le jeu
+        function startGame() {
+            sequence = [];
+            playerSequence = [];
+            score = 0;
+            scoreDisplay.textContent = 'Score : 0';
+            messageDisplay.textContent = '';
+            nextRound();
+        }
+
+        // Ajouter une nouvelle couleur à la séquence
+        function nextRound() {
+            playerSequence = [];
+            sequence.push(getRandomColor());
+            displaySequence();
+        }
+
+        // Générer une couleur aléatoire
+        function getRandomColor() {
+            const colors = ['red', 'blue', 'green', 'yellow'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Afficher la séquence
+        function displaySequence() {
+            isDisplayingSequence = true;
+            let i = 0;
+            const interval = setInterval(() => {
+                highlightButton(sequence[i]);
+                i++;
+                if (i >= sequence.length) {
+                    clearInterval(interval);
+                    isDisplayingSequence = false;
+                }
+            }, 1000);
+        }
+
+        // Mettre en surbrillance un bouton
+        function highlightButton(color) {
+            const button = document.querySelector(`[data-color="${color}"]`);
+            button.style.opacity = 1;
+            setTimeout(() => {
+                button.style.opacity = 0.7;
+            }, 500);
+        }
+
+        // Vérifier la séquence du joueur
+        function checkSequence(color) {
+            if (isDisplayingSequence) return;
+
+            playerSequence.push(color);
+            const index = playerSequence.length - 1;
+
+            if (playerSequence[index] !== sequence[index]) {
+                endGame();
+                return;
+            }
+
+            if (playerSequence.length === sequence.length) {
+                score++;
+                scoreDisplay.textContent = `Score : ${score}`;
+                setTimeout(() => {
+                    nextRound();
+                }, 1000);
+            }
+        }
+
+        // Terminer le jeu
+        function endGame() {
+            messageDisplay.textContent = 'Vous avez perdu ! Appuyez sur un bouton pour recommencer.';
+            sequence = [];
+            playerSequence = [];
+            score = 0;
+        }
+
+        // Écouteurs d'événements pour les boutons
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (sequence.length === 0) {
+                    startGame();
+                } else {
+                    const color = button.getAttribute('data-color');
+                    checkSequence(color);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
