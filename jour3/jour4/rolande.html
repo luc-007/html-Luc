@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background-color: #f4f4f4; margin-top: 50px; }
+        #letter { font-size: 6rem; font-weight: bold; color: blue; margin: 20px; }
+        #score, #timer, #message { margin-top: 20px; font-size: 1.5rem; }
+        #message { color: green; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <p>Appuie sur <strong>espace</strong> pour commencer</p>
+    <div id="letter"></div>
+    <p id="score">Score : 0</p>
+    <p id="timer">Temps restant : 30s</p>
+    <p id="message"></p>
+
+    <audio id="correctSound" src="correct.mp3"></audio>
+    <audio id="wrongSound" src="wrong.mp3"></audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let score = 0, timeLeft = 30, gameActive = false, timerInterval;
+            const letterDiv = document.getElementById("letter");
+            const scoreDisplay = document.getElementById("score")
+            const timerDisplay = document.getElementById("timer");
+            const messageDisplay = document.getElementById("message");
+            const correctSound = document.getElementById("correctSound");
+            const wrongSound = document.getElementById("wrongSound");
+
+            function getRandomLetter() {
+                return "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[Math.floor(Math.random() * 26)];
+            }
+
+            function startGame() {
+                if (gameActive) return;
+                gameActive = true; score = 0; timeLeft = 30;
+                scoreDisplay.textContent = "Score : 0";
+                timerDisplay.textContent = "Temps restant : 30s";
+                messageDisplay.textContent = "";
+                startTimer();
+                newLetter();
+            }
+
+            function startTimer() {
+                timerInterval = setInterval(() => {
+                    timeLeft--;
+                    timerDisplay.textContent = "TempsRestant : ${timeLeft}s";
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        endGame();
+                    }
+                }, 1000);
+            }
+
+            function newLetter() {
+                letterDiv.textContent = getRandomLetter();
+            }
+
+            function endGame() {
+                gameActive = false;
+                letterDiv.textContent = "";
+                messageDisplay.textContent = "Temps écoulé ! Score final : ${score}";
+            }
+
+            document.addEventListener("keydown", (event) => {
+                if (!gameActive) return;
+                if (event.key.toUpperCase() === letterDiv.textContent) {
+                    score++; scoreDisplay.textContent = "Score : " + score;
+                    correctSound.play(); newLetter();
+                } else {
+                    wrongSound.play();
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.code === "Space" && !gameActive) startGame();
+            });
+        });
+    </script>
+</body>
+</html>
