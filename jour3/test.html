@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 0 40px 40px 0;
+            transition: transform 2s; /* Ajout d'une transition pour un effet fluide */
+            margin-left: 0;
+            border-left:5px solid red;
+        }
+        
+        .box:hover {
+            transform: translateX(100px); /* Déplacement au survol */
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
