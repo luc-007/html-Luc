@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,19 +126,6 @@
                 top: 800px;
                 left: 20px;
             }
-
-            .row{
-                background-color: #ff0000;
-                width: 100vw;
-                height: 100vh;
-                padding: 2px;
-            }
-
-            .col, .col-2{
-                background-color: #00ff00;
-                border: 3px solid #0000ff;
-            }
-
             .xicone {
                 width: 200px;
                 height: 50px;
@@ -156,6 +142,12 @@
             .xicone:hover {
                 transform: translateX(150px);
                 /* Déplacement au survol */
+            }
+
+            .container{
+                display: flex;
+                width: 100vw;
+                height: 55vh;
             }
 
             /* Styles pour les écrans de petite taille */
@@ -360,19 +352,52 @@
             <!--Création des videos-->
 
             <div class="container">
-                <section class="video">
-
-                    <div class="row">
-                        <div class="col-2"></div>
-                        <div class="col-2"></div>
-                        <div class="col-2"></div>
-                        <div class="col-2"></div>
-                        <div class="col-2"></div>
-                        <div class="col"></div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/zoolander-2001-comedie.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
-    
-                </section>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/lepatientanglais-1996-dramatique.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
+
             <!-- Script Bootstrap -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
