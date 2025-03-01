@@ -33,7 +33,7 @@
                 padding: 10px 0;
             }
 
-            #dropdownMenuButton1{
+            #dropdownMenuButton1 {
                 background-color: red;
             }
 
@@ -78,7 +78,7 @@
                 color: white;
             }
 
-            .span{
+            .span {
                 color: red;
                 margin-left: 10px;
             }
@@ -243,6 +243,50 @@
                     font-size: 0.9rem;
                 }
             }
+
+            .iframe-display {
+                width: 320px; /* Correspondre à la taille de l'image */
+                height: 320px; /* Correspondre à la hauteur des deux lignes de vidéos */
+                border: 1px solid #ccc;
+                position: relative;
+                display: flex;
+                margin-top: -19px;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .video-container {
+                display: flex;
+                align-items: center; /* Aligner verticalement */
+                gap: 20px;
+            }
+            
+            .video-thumbnail {
+                width: 200px;
+                height: 150px;
+                cursor: pointer;
+                border: 1px solid #ccc;
+            }
+            
+            .video-iframe-container {
+                position: relative;
+                width: 200px; /* Correspondre à la taille de l'image */
+                height: 150px; /* Correspondre à la taille de l'image */
+                border: 1px solid #ccc;
+                display: none; /* Caché par défaut */
+            }
+            
+            .close-button {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background-color: #ff0000;
+                color: white;
+                border: none;
+                padding: 5px;
+                cursor: pointer;
+                font-size: 12px;
+            }
         </style>
     </head>
 
@@ -302,7 +346,8 @@
                             <h2>LATEST<span class="span">ON </span> LINE<span class="span">MO</span>VIES</h2>
                             <p>IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
                             <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
-                                <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH TRAILERS</a>
+                                <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH
+                                    TRAILERS</a>
                             </div>
                         </div>
                     </div>
@@ -312,7 +357,8 @@
                             <h2>LATEST<span class="span">ON </span> LINE<span class="span">MO</span>VIES</h2>
                             <p>IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
                             <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
-                                <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH TRAILERS</a>
+                                <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH
+                                    TRAILERS</a>
                             </div>
                         </div>
                     </div>
@@ -323,7 +369,8 @@
                             <p>IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
 
                             <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
-                                <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH TRAILERS</a>
+                                <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH
+                                    TRAILERS</a>
                             </div>
                         </div>
                     </div>
@@ -333,7 +380,8 @@
                             <h2>LATEST<span class="span">ON </span> LINE<span class="span">MO</span>VIES</h2>
                             <p>IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
                             <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
-                                <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH TRAILERS</a>
+                                <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH
+                                    TRAILERS</a>
                             </div>
                         </div>
                     </div>
@@ -476,7 +524,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -485,7 +533,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -494,7 +542,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -503,7 +551,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -534,7 +582,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -543,7 +591,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -552,7 +600,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -561,7 +609,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -617,7 +665,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -626,7 +674,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -635,7 +683,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -644,7 +692,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -675,7 +723,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -684,7 +732,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -693,7 +741,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -702,7 +750,7 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-    
+
                 <div class="card" style="width: 13rem;">
                     <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -737,15 +785,161 @@
                 style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
             </div>
         </div>
-<div>
-    
-</div>
+        <div>
 
+        </div>
+
+        <!--création de là des video-->
+        <div>
+            <div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div>
+
+
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="row">
+                        <!-- Répéter les vidéos -->
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img
+                                    src="img/zoolander-2001-comedie.jpg"
+                                    alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img
+                                    src="img/seven-1995-thriller.jpg"
+                                    alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img
+                                    src="img/layout-one-v2.jpg"
+                                    alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img
+                                    src="img/shutterisland-2010-thriller.jpg"
+                                    alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img
+                                    src="img/shutterisland-2010-thriller.jpg"
+                                    alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img
+                                    src="img/zoolander-2001-comedie.jpg"
+                                    alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img
+                                    src="img/thefall-2006-dramatique.jpg"
+                                    alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img
+                                    src="img/swissarmyman-2016-comedie.jpg"
+                                    alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Div pour afficher les iframes -->
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="iframe-display">
+                        <div class="iframe-container">
+                            <!-- Bouton pour fermer la vidéo -->
+                            <button class="close-button">Fermer la vidéo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <!-- Script Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
+
+            <script>
+                // Sélectionner les éléments
+                const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+                const iframeContainer = document.querySelector('.iframe-container');
+                const closeButton = document.querySelector('.close-button');
+        
+                // Ajouter un écouteur d'événement au clic sur chaque image
+                videoThumbnails.forEach(thumbnail => {
+                    thumbnail.addEventListener('click', () => {
+                        // Récupérer l'iframe depuis l'attribut data-iframe
+                        const iframeHTML = thumbnail.getAttribute('data-iframe');
+        
+                        // Charger l'iframe dans le conteneur
+                        iframeContainer.innerHTML = iframeHTML + closeButton.outerHTML;
+        
+                        // Afficher le conteneur de l'iframe et le bouton "Fermer"
+                        iframeContainer.style.display = 'block';
+                    });
+                });
+        
+                // Ajouter un écouteur d'événement au clic sur le bouton "Fermer"
+                document.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('close-button')) {
+                        // Masquer l'iframe et le bouton
+                        iframeContainer.style.display = 'none';
+                        iframeContainer.innerHTML = ''; // Réinitialiser le contenu
+                    }
+                });
+            </script>
 
     </body>
 
