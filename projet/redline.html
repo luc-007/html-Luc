@@ -33,6 +33,10 @@
                 padding: 10px 0;
             }
 
+            #dropdownMenuButton1{
+                background-color: red;
+            }
+
             .carousel {
                 position: relative;
                 z-index: 1;
@@ -250,19 +254,21 @@
                     <a class="navbar-brand">
                         <h1>ALLEZ<span class="cine">CINE!</span></h1>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <div class="nav-links">
                             <p>HOMME</p>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>GENRE</option>
-                                <option value="1">Action</option>
-                                <option value="2">Comédie</option>
-                                <option value="3">Drame</option>
-                            </select>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    GENRE
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Comedy</a></li>
+                                    <li><a class="dropdown-item" href="#">Comedy</a></li>
+                                    <li><a class="dropdown-item" href="#">Comedy</a></li>
+                                </ul>
+                            </div>
                             <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>
                             <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>
                             <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>

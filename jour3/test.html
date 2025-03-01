@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,21 +120,22 @@
                 margin-left: 10px;
             }
 
-            .social-icons{
-                position:absolute;
+            .social-icons {
+                position: absolute;
                 z-index: 1000;
                 top: 800px;
                 left: 20px;
             }
 
-            .row{
+            .row {
                 background-color: #ff0000;
                 width: 100vw;
                 height: 100vh;
                 padding: 2px;
             }
 
-            .col, .col-2{
+            .col,
+            .col-2 {
                 background-color: #00ff00;
                 border: 3px solid #0000ff;
             }
@@ -203,6 +203,25 @@
                 }
             }
 
+            .video-container {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .video-thumbnail {
+                width: 200px;
+                height: 150px;
+                cursor: pointer;
+                border: 1px solid #ccc;
+            }
+            
+            .video-iframe-container {
+                width: 400px;
+                height: 300px;
+                border: 1px solid #ccc;
+            }
+
             /* Styles pour les écrans de très petite taille */
             @media (max-width: 576px) {
                 .navbar-brand h1 {
@@ -240,34 +259,24 @@
                     <a class="navbar-brand">
                         <h1>ALLEZ<span class="cine">CINE!</span></h1>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <div class="nav-links">
-                            <p>HOMME</p>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>GENRE</option>
-                                <option value="1">Action</option>
-                                <option value="2">Comédie</option>
-                                <option value="3">Drame</option>
-                            </select>
-                            <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>
-                            <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>
-                            <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>
-                            <p>CONTACT</p>
-                        </div>
-                        <form class="d-flex search-form" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-warning" type="submit">Search</button>
-                        </form>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            GENRE
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Comedy</a></li>
+                            <li><a class="dropdown-item" href="#">Comedy</a></li>
+                            <li><a class="dropdown-item" href="#">Comedy</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
 
             <!-- Carrousel -->
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"style="background-color: rgba(0, 0, 0, 0.877);">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+                style="background-color: rgba(0, 0, 0, 0.877);">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -359,24 +368,130 @@
 
             <!--Création des videos-->
 
-            <div class="container">
-                <section class="video">
-
-                    <div class="row">
-                        <div class="col-2"></div>
-                        <div class="col-2"></div>
-                        <div class="col-2"></div>
-                        <div class="col-2"></div>
-                        <div class="col-2"></div>
-                        <div class="col"></div>
+            <div>
+                <div>
+                    <div>
+                        <div class="container" style="background-color: #f0eded; border:0px; border-radius:0; margin-top:-10px">
+                            <div style="display: flex;">
+                                <div class="card" style="width: 13rem;">
+                                    <img src="img/zoolander-2001-comedie.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem;">
+                                    <img src="img/lepatientanglais-1996-dramatique.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                    
+                                <div class="card" style="width: 13rem;">
+                                    <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                    
+                                <div class="card" style="width: 13rem;">
+                                    <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-    
-                </section>
+                    <div>
+                        <div>
+                            <div class="container" style="background-color: #f0eded; border:0px; border-radius:0; margin-top:-10px">
+                                <div style="display: flex;">
+                                    <div class="card" style="width: 13rem;">
+                                        <img src="img/zoolander-2001-comedie.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 13rem;">
+                                        <img src="img/lepatientanglais-1996-dramatique.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">
+                                                card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="card" style="width: 13rem;">
+                                        <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="card" style="width: 13rem;">
+                                        <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                    </div>
+                </div>
+                <div style="border:2px solid #f0eded; border-radius:0; margin-top:-10px">
+
+                </div>
             </div>
+
+            
+            <div class="video-container">
+                <!-- Image cliquable -->
+                <img
+                src="img.jpg"
+                alt="Cliquez pour charger la vidéo"
+                class="video-thumbnail"
+                data-iframe='<iframe width="560" height="315" src="https://www.youtube.com/embed/C-ovS7tVpCE?si=UR3sR5nZD1BfaZOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+>
+            
+                <!-- Div où l'iframe sera chargée -->
+                <div class="video-iframe-container"></div>
+            </div>
+
             <!-- Script Bootstrap -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                crossorigin="anonymous"></script>
+                crossorigin="anonymous">
+
+                // Sélectionner l'image et le conteneur de l'iframe
+const videoThumbnail = document.querySelector('.video-thumbnail');
+const iframeContainer = document.querySelector('.video-iframe-container');
+
+// Ajouter un écouteur d'événement au clic sur l'image
+videoThumbnail.addEventListener('click', () => {
+    // Récupérer l'iframe depuis l'attribut data-iframe
+    const iframeHTML = videoThumbnail.getAttribute('data-iframe');
+
+    // Charger l'iframe dans le conteneur
+    iframeContainer.innerHTML = iframeHTML;
+});
+            
+            </script>
     </body>
 
     </html>
