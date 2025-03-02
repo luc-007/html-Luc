@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 1, 1, 0.212);
+    background-color: rgba(20, 1, 1, 0.589);
     /* Fond semi-transparent */
     z-index: 1000;
     /* Assure que la nav est au-dessus du carrousel */
@@ -138,11 +138,10 @@
     width: 100vw;
     height: 50vh;
     justify-content: space-around;
-    background-color: rgba(255, 0, 0, 0.103);
+    background-color: rgba(17, 0, 0, 0.473);
     padding: 20px;
     border-radius: 10px;
     margin-top: 10px;
-    border: 2px solid red;
 }
 
 .div1 {
@@ -272,28 +271,46 @@
     font-size: 12px;
 }
 
- /* Style pour chaque conteneur vidéo */
- .video-container {
+/* Style personnalisé pour la box de cookies */
+.cookie-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.cookie-box button {
+    margin: 0 5px;
+}
+
+/* Style pour chaque conteneur vidéo */
+.video-container {
     position: relative;
     width: 100%;
     margin-bottom: 20px;
     cursor: pointer;
-  }
+}
 
-  .video-container img {
+.video-container img {
     width: 100%;
     height: auto;
     display: block;
-  }
+}
 
-  .video-container iframe {
+.video-container iframe {
     width: 100%;
-    height: 200px; /* Ajustez la hauteur selon vos besoins */
+    height: 200px;
+    /* Ajustez la hauteur selon vos besoins */
     display: none;
-  }
+}
 
-  /* Style pour le bouton de fermeture */
-  .close-button {
+/* Style pour le bouton de fermeture */
+.close-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -304,21 +321,24 @@
     cursor: pointer;
     border-radius: 50%;
     font-size: 16px;
-    display: none; /* Caché par défaut */
-  }
+    display: none;
+    /* Caché par défaut */
+}
 
-  .close-button:hover {
+.close-button:hover {
     background: rgba(0, 0, 0, 0.9);
-  }
+}
 
-  /* Style pour la description du film */
-  .film-description {
+/* Style pour la description du film */
+.film-description {
     text-align: center;
     margin-top: 10px;
-  }
+}
 
-  /* Ajustement pour aligner les images sur une seule ligne */
-  .row-nowrap {
-    flex-wrap: nowrap; /* Empêcher le retour à la ligne */
-    overflow-x: auto; /* Ajouter un défilement horizontal si nécessaire */
-  }
+/* Ajustement pour aligner les images sur une seule ligne */
+.row-nowrap {
+    flex-wrap: nowrap;
+    /* Empêcher le retour à la ligne */
+    overflow-x: auto;
+    /* Ajouter un défilement horizontal si nécessaire */
+}
