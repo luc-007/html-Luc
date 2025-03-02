@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedLine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Vérification d'âge -->
+    <script>
+        // Fonction pour vérifier l'âge
+        function checkAge() {
+            const age = prompt("Bienvenue ! Veuillez indiquer votre âge :");
+            if (age === null || age === "") {
+                alert("Vous devez indiquer votre âge pour accéder au site.");
+                checkAge(); // Redemander l'âge
+            } else if (parseInt(age) >= 18) {
+                alert("Bienvenue sur le site !");
+            } else {
+                window.location.href = "https://www.imdb.com"; // Redirection vers IMDB
+            }
+        }
+        checkAge(); // Appeler la fonction au chargement de la page
+    </script>
+
+    <div>
+        <!-- Barre de navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <h1>ALLEZ<span class="cine">CINE!</span></h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="nav-links">
+                        <p>HOMME</p>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                GENRE
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Comedy</a></li>
+                                <li><a class="dropdown-item" href="#">Comedy</a></li>
+                                <li><a class="dropdown-item" href="#">Comedy</a></li>
+                            </ul>
+                        </div>
+                        <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>
+                        <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>
+                        <div style="width: 80px; height:38px; background-color:rgba(255, 255, 255, 0.2);"></div>
+                        <p>CONTACT</p>
+                    </div>
+                    <form class="d-flex search-form" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-warning" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Carrousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+            style="background-color: rgba(0, 0, 0, 0.877);">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/car2.jpg" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption">
+                        <h2>LATEST<span class="span">ON </span> LINE<span class="span">MO</span>VIES</h2>
+                        <p>IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
+                        <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
+                            <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH
+                                TRAILERS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/car1.jpg" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption">
+                        <h2>LATEST<span class="span">ON </span> LINE<span class="span">MO</span>VIES</h2>
+                        <p>IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
+                        <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
+                            <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH
+                                TRAILERS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/car6.webp" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption">
+                        <h2>LATEST<span class="span">ON </span> LINE<span class="span">MO</span>VIES</h2>
+                        <p>IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
+
+                        <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
+                            <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH
+                                TRAILERS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/car5.jpg" class="d-block w-100" alt="Slide 4">
+                    <div class="carousel-caption">
+                        <h2>LATEST<span class="span">ON </span> LINE<span class="span">MO</span>VIES</h2>
+                        <p>IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
+                        <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
+                            <a class="btn btn-primary" href="#" role="button" style="background-color:red;">WATCH
+                                TRAILERS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div
+            style="display: flex; width:100vw;height:50px; background-color:red;padding:5px; border-bottom:5px solid black; align-items: center;">
+            <div style="flex: 1; display: flex; align-items: center;">
+                <p style="margin:5px 30px 0 40px; color:white"><a href="https://icons8.com/icon/9660/call"></a>(000)0466
+                    05 83 76 </p>
+                <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal"
+                    style="background-color: black; width:110px;border:opx solid">Login</button>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registerModal"
+                    style="background-color: black; width:110px; border:opx solid">Register</button>
+            </div>
+        </div>
+
+
+        <!-- Modal pour le formulaire de connexion -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Connexion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="loginUsername" class="form-label">Identifiant</label>
+                                <input type="text" class="form-control" id="loginUsername" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginPassword" class="form-label">Mot de passe</label>
+                                <input type="password" class="form-control" id="loginPassword" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Rester connecté</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">OK</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <a href="#" class="d-block mt-2">Mot de passe oublié ?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal pour le formulaire d'inscription -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Inscription</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="registerName" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="registerName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="registerEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Mot de passe</label>
+                                <input type="password" class="form-control" id="registerPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerConfirmPassword" class="form-label">Confirmer le mot de
+                                    passe</label>
+                                <input type="password" class="form-control" id="registerConfirmPassword" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="acceptTerms" required>
+                                <label class="form-check-label" for="acceptTerms">J'accepte les conditions générales
+                                    d'utilisation</label>
+                            </div>
+                            <button type="submit" class="btn btn-success">S'inscrire</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icônes des réseaux sociaux -->
+        <div class="social-icons">
+
+            <div class="xicone"
+                style="background-color: rgb(0, 217, 255);display:flex; justify-content:end; align-items:center; padding-right:10px;">
+                <a href="#" class="fa fa-facebook" style="color: white; width:30px; height:30px; font-size:2em"></a>
+            </div>
+            <div class="xicone"
+                style="background-color: rgb(58, 60, 168);display:flex; justify-content:end; align-items:center; padding-right:10px;">
+                <a href="#" class="fa fa-twitter" style="color: white; width:30px; height:30px; font-size:2em"></a>
+            </div>
+            <div class="xicone"
+                style="background-color: rgb(247, 99, 197);display:flex; justify-content:end; align-items:center; padding-right:10px;">
+                <a href="#" class="fa fa-instagram" style="color: white; width:30px; height:30px; font-size:2em"></a>
+            </div>
+            <div class="xicone"
+                style="background-color: rgb(245, 79, 79);display:flex; justify-content:end; align-items:center; padding-right:10px;">
+                <a href="#" class="fa fa-youtube" style="color: white; width:30px; height:30px; font-size:2em"></a>
+            </div>
+        </div>
+
+
+        <!-- Script Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    </div>
+
+    <!--Création des videos-->
+
+    <div class="container">
+        <div class="card" style="width: 13rem;">
+            <img src="img/zoolander-2001-comedie.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 13rem;">
+            <img src="img/lepatientanglais-1996-dramatique.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 13rem;">
+            <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 13rem;">
+            <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 13rem;">
+            <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>

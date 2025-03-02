@@ -1,11 +1,291 @@
 
-.navbar-brand{
-    background-color: aqua;
-    font-weight: bold;
-    font-size: 2em;
-    color:red;
+ /* Styles personnalisés */
+ .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 1, 1, 0.212);
+    /* Fond semi-transparent */
+    z-index: 1000;
+    /* Assure que la nav est au-dessus du carrousel */
+    padding: 10px 0;
 }
 
-.cine{
-    color:white;
+#dropdownMenuButton1 {
+    background-color: red;
+}
+
+.carousel {
+    position: relative;
+    z-index: 1;
+    /* Assure que le carrousel est en dessous de la nav */
+}
+
+.carousel-item {
+    height: 100vh;
+    /* Hauteur du carrousel égale à la hauteur de l'écran */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    /* Ajuste l'image pour couvrir tout l'espace */
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    /* Opacité réduite des images */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+.carousel-caption h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.span {
+    color: red;
+    margin-left: 10px;
+}
+
+.navbar-brand h1 {
+    color: red;
+    /* Couleur du texte du logo */
+    font-size: 2rem;
+    margin: 0;
+}
+
+.navbar-brand .cine {
+    color: white;
+    /* Couleur différente pour "CINE!" */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Espacement entre les éléments */
+}
+
+.nav-links p {
+    color: white;
+    /* Couleur du texte des liens */
+    margin: 0;
+    cursor: pointer;
+}
+
+.nav-links p:hover {
+    color: #ff0000;
+    /* Changement de couleur au survol */
+}
+
+.form-select {
+    width: auto;
+}
+
+.search-form {
+    margin-left: auto;
+}
+
+.search-form .form-control {
+    width: 200px;
+}
+
+.search-form .btn {
+    margin-left: 10px;
+}
+
+.social-icons {
+    position: absolute;
+    z-index: 1000;
+    top: 1300px;
+    left: 20px;
+}
+
+.xicone {
+    width: 200px;
+    height: 50px;
+    border-radius: 0 40px 40px 0;
+    transition: transform .7s;
+    /* Ajout d'une transition pour un effet fluide */
+    margin-left: 0;
+    border-left: 5px solid red;
+    position: relative;
+    left: -160px;
+    margin-top: 1px;
+}
+
+.xicone:hover {
+    transform: translateX(150px);
+    /* Déplacement au survol */
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    justify-content: space-around;
+    background-color: rgba(255, 0, 0, 0.103);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid red;
+}
+
+.div1 {
+    display: flex;
+    margin: 10px 0 20px 100px;
+}
+
+/* Styles pour les écrans de petite taille */
+@media (max-width: 768px) {
+    .navbar-brand h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .search-form {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-form .form-control {
+        width: 100%;
+    }
+
+    .search-form .btn {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .form-select {
+        width: 100%;
+    }
+
+    .nav-links p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* Styles pour les écrans de très petite taille */
+@media (max-width: 576px) {
+    .navbar-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    .nav-links p {
+        font-size: 0.8rem;
+    }
+
+    .search-form .form-control {
+        font-size: 0.9rem;
+    }
+
+    .search-form .btn {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+.iframe-display {
+    width: 320px;
+    /* Correspondre à la taille de l'image */
+    height: 320px;
+    /* Correspondre à la hauteur des deux lignes de vidéos */
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    margin-top: -19px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    /* Aligner verticalement */
+    gap: 20px;
+}
+
+.video-thumbnail {
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.video-iframe-container {
+    position: relative;
+    width: 200px;
+    /* Correspondre à la taille de l'image */
+    height: 150px;
+    /* Correspondre à la taille de l'image */
+    border: 1px solid #ccc;
+    display: none;
+    /* Caché par défaut */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Style personnalisé pour la box de cookies */
+.cookie-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.cookie-box button {
+    margin: 0 5px;
 }

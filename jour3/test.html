@@ -1,192 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Inclure Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <title>Site avec vérification d'âge et gestion de cookies</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .iframe-display {
-            width: 320px; /* Correspondre à la taille de l'image */
-            height: 320px; /* Correspondre à la hauteur des deux lignes de vidéos */
-            border: 1px solid #ccc;
-            position: relative;
-            display: flex;
-            margin-top: -19px;
-            justify-content: center;
-            align-items: center;
+        /* Style personnalisé pour la box de cookies */
+        .cookie-box {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
         }
 
-        .video-container {
-            display: flex;
-            align-items: center; /* Aligner verticalement */
-            gap: 20px;
-        }
-        
-        .video-thumbnail {
-            width: 200px;
-            height: 150px;
-            cursor: pointer;
-            border: 1px solid #ccc;
-        }
-        
-        .video-iframe-container {
-            position: relative;
-            width: 200px; /* Correspondre à la taille de l'image */
-            height: 150px; /* Correspondre à la taille de l'image */
-            border: 1px solid #ccc;
-            display: none; /* Caché par défaut */
-        }
-        
-        .close-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #ff0000;
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-            font-size: 12px;
+        .cookie-box button {
+            margin: 0 5px;
         }
     </style>
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100">
-    <div class="container mt-5">
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <div class="row">
-                    <!-- Répéter les vidéos -->
-                    <div class="col-md-3 mb-4">
-                        <div class="video-container">
-                            <img
-                                src="img.jpg"
-                                alt="Cliquez pour charger la vidéo"
-                                class="video-thumbnail"
-                                data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                            >
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="video-container">
-                            <img
-                                src="img.jpg"
-                                alt="Cliquez pour charger la vidéo"
-                                class="video-thumbnail"
-                                data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                            >
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="video-container">
-                            <img
-                                src="img.jpg"
-                                alt="Cliquez pour charger la vidéo"
-                                class="video-thumbnail"
-                                data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                            >
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="video-container">
-                            <img
-                                src="img.jpg"
-                                alt="Cliquez pour charger la vidéo"
-                                class="video-thumbnail"
-                                data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                            >
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="video-container">
-                            <img
-                                src="img.jpg"
-                                alt="Cliquez pour charger la vidéo"
-                                class="video-thumbnail"
-                                data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                            >
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="video-container">
-                            <img
-                                src="img.jpg"
-                                alt="Cliquez pour charger la vidéo"
-                                class="video-thumbnail"
-                                data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                            >
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="video-container">
-                            <img
-                                src="img.jpg"
-                                alt="Cliquez pour charger la vidéo"
-                                class="video-thumbnail"
-                                data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                            >
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="video-container">
-                            <img
-                                src="img.jpg"
-                                alt="Cliquez pour charger la vidéo"
-                                class="video-thumbnail"
-                                data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Div pour afficher les iframes -->
-            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                <div class="iframe-display">
-                    <div class="iframe-container">
-                        <!-- Bouton pour fermer la vidéo -->
-                        <button class="close-button">Fermer la vidéo</button>
-                    </div>
+<body>
+    <!-- Vérification d'âge -->
+    <script>
+        // Fonction pour vérifier l'âge
+        function checkAge() {
+            const age = prompt("Bienvenue ! Veuillez indiquer votre âge :");
+            if (age === null || age === "") {
+                alert("Vous devez indiquer votre âge pour accéder au site.");
+                checkAge(); // Redemander l'âge
+            } else if (parseInt(age) >= 18) {
+                alert("Bienvenue sur le site !");
+            } else {
+                window.location.href = "https://www.imdb.com"; // Redirection vers IMDB
+            }
+        }
+        checkAge(); // Appeler la fonction au chargement de la page
+    </script>
+
+    <!-- Barre de navigation avec boutons Login/Register -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mon Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <button class="btn btn-primary me-2" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">Register</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal pour le formulaire de connexion -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Connexion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginUsername" class="form-label">Identifiant</label>
+                            <input type="text" class="form-control" id="loginUsername" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Rester connecté</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">OK</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <a href="#" class="d-block mt-2">Mot de passe oublié ?</a>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Inclure Bootstrap JS et ses dépendances -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Modal pour le formulaire d'inscription -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Inscription</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="registerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerConfirmPassword" class="form-label">Confirmer le mot de passe</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="acceptTerms" required>
+                            <label class="form-check-label" for="acceptTerms">J'accepte les conditions générales
+                                d'utilisation</label>
+                        </div>
+                        <button type="submit" class="btn btn-success">S'inscrire</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Box de mise en garde pour les cookies -->
+    <div class="cookie-box">
+        <p>Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre utilisation
+            des cookies.</p>
+        <button class="btn btn-primary" onclick="acceptCookies()">Accepter</button>
+        <button class="btn btn-secondary" onclick="declineCookies()">Refuser</button>
+    </div>
+
+    <!-- Bootstrap JS et dépendances -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script>
-        // Sélectionner les éléments
-        const videoThumbnails = document.querySelectorAll('.video-thumbnail');
-        const iframeContainer = document.querySelector('.iframe-container');
-        const closeButton = document.querySelector('.close-button');
+        // Gestion des cookies
+        function acceptCookies() {
+            document.querySelector('.cookie-box').style.display = 'none';
+            alert("Vous avez accepté les cookies.");
+        }
 
-        // Ajouter un écouteur d'événement au clic sur chaque image
-        videoThumbnails.forEach(thumbnail => {
-            thumbnail.addEventListener('click', () => {
-                // Récupérer l'iframe depuis l'attribut data-iframe
-                const iframeHTML = thumbnail.getAttribute('data-iframe');
-
-                // Charger l'iframe dans le conteneur
-                iframeContainer.innerHTML = iframeHTML + closeButton.outerHTML;
-
-                // Afficher le conteneur de l'iframe et le bouton "Fermer"
-                iframeContainer.style.display = 'block';
-            });
-        });
-
-        // Ajouter un écouteur d'événement au clic sur le bouton "Fermer"
-        document.addEventListener('click', (event) => {
-            if (event.target.classList.contains('close-button')) {
-                // Masquer l'iframe et le bouton
-                iframeContainer.style.display = 'none';
-                iframeContainer.innerHTML = ''; // Réinitialiser le contenu
-            }
-        });
+        function declineCookies() {
+            document.querySelector('.cookie-box').style.display = 'none';
+            alert("Vous avez refusé les cookies.");
+        }
     </script>
 </body>
+
 </html>
