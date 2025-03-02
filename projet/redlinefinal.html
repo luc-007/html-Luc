@@ -249,66 +249,824 @@
             </div>
         </div>
 
+        <!-- Section des films -->
+        <div class="container">
+            <div class="row row-nowrap">
+                <!-- Image 1 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/swissarmyman-2016-comedie.jpg" alt="Film 1" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 1</h4>
+                        <p>Année de création : 2020</p>
+                    </div>
+                </div>
 
-        <!-- Script Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+                <!-- Image 2 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/lesdeuxtours-2002-aventure.jpg" alt="Film 2" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 2</h4>
+                        <p>Année de création : 2018</p>
+                    </div>
+                </div>
 
-    </div>
+                <!-- Image 3 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/intouchables-2011-comedie.jpg" alt="Film 3" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 3</h4>
+                        <p>Année de création : 2015</p>
+                    </div>
+                </div>
 
-    <!--Création des videos-->
+                <!-- Image 4 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/inception-2010-scifi.jpg" alt="Film 4" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 4</h4>
+                        <p>Année de création : 2012</p>
+                    </div>
+                </div>
 
-    <div class="container">
-        <div class="card" style="width: 13rem;">
-            <img src="img/zoolander-2001-comedie.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- Image 5 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/seven-1995-thriller.jpg" alt="Film 5" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 5</h4>
+                        <p>Année de création : 2010</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card" style="width: 13rem;">
-            <img src="img/lepatientanglais-1996-dramatique.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
+            <a class="btn btn-primary" href="#" role="button" style="background-color:red;">PLUS DE FILMS</a>
+        </div>
+
+        <div
+            style="display:flex; border-left:3px solid red; height:40px; align-items:center; margin-top:20px; margin-left:60px">
+            <p style="padding-left:20px; padding-top:15px; font-size:2em;">FEATURED MOVIES</p>
+        </div>
+
+        <div class="div1">
+            <div
+                style="background-color: #ff0000; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center;color:white">
+                All</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
+                Action</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
+                Policiers</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
             </div>
         </div>
 
-        <div class="card" style="width: 13rem;">
-            <img src="img/Survivestyle5-2004-comedie.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="container">
+            <div class="row row-nowrap">
+                <!-- Image 1 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/shutterisland-2010-thriller.jpg" alt="Film 1" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 1</h4>
+                        <p>Année de création : 2020</p>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/thefall-2006-dramatique.jpg" alt="Film 2" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 2</h4>
+                        <p>Année de création : 2018</p>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/shutterisland-2010-thriller.jpg" alt="Film 3" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 3</h4>
+                        <p>Année de création : 2015</p>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/starwarsempire-1980-scifi.jpg" alt="Film 4" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 4</h4>
+                        <p>Année de création : 2012</p>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/starwarsempire-1980-scifi.jpg" alt="Film 5" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 5</h4>
+                        <p>Année de création : 2010</p>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="col">
+                    <div class="video-container">
+                        <img src="img/swissarmyman-2016-comedie.jpg" alt="Film 6" onclick="loadYouTubeVideo(this)">
+                        <iframe class="youtubeVideo" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                    </div>
+                    <div class="film-description">
+                        <h4>Film 6</h4>
+                        <p>Année de création : 2008</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; justify-content:center;margin: 30px 0 0 20px;">
+            <a class="btn btn-primary" href="#" role="button" style="background-color:red;">PLUS DE FILMS</a>
+        </div>
+
+        <div
+            style="display:flex; border-left:3px solid red; height:40px; align-items:center; margin-top:20px; margin-left:60px">
+            <p style="padding-left:20px; padding-top:15px; font-size:2em;">SHOP MOVIES</p>
+        </div>
+
+        <div class="div1">
+            <div
+                style="background-color: #ff0000; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center;color:white">
+                All</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
+                Action</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
+                Policiers</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
             </div>
         </div>
 
-        <div class="card" style="width: 13rem;">
-            <img src="img/seven-1995-thriller.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="container" style="background-color: #f2f2f2; height: auto;">
+            <!-- ligne de 6 vidéos chacune -->
+            <section>
+                <!-- Première ligne de 6 vidéos -->
+                <div class="row row-nowrap">
+                    <!-- Image 7 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/Survivestyle5-2004-comedie.jpg" alt="Film 7"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 7</h4>
+                            <p>Année de création : 2006</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 8 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/batmanmovie-2017-comedie.jpg" alt="Film 8"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 8</h4>
+                            <p>Année de création : 2004</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 9 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/Survivestyle5-2004-comedie.jpg" alt="Film 9"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 9</h4>
+                            <p>Année de création : 2002</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 10 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/thefall-2006-dramatique.jpg" alt="Film 10"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 10</h4>
+                            <p>Année de création : 2000</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 11 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/lesdeuxtours-2002-aventure.jpg" alt="Film 11"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 11</h4>
+                            <p>Année de création : 1998</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 12 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/Survivestyle5-2004-comedie.jpg" alt="Film 12"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 12</h4>
+                            <p>Année de création : 1996</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deuxième ligne de 6 vidéos -->
+                <div class="row row-nowrap mt-4">
+                    <!-- Image 13 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/starwarsempire-1980-scifi.jpg" alt="Film 13"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 13</h4>
+                            <p>Année de création : 1994</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 14 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/lepatientanglais-1996-dramatique.jpg" alt="Film 14"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 14</h4>
+                            <p>Année de création : 1992</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 15 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/shutterisland-2010-thriller.jpg" alt="Film 15"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 15</h4>
+                            <p>Année de création : 1990</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 16 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/intouchables-2011-comedie.jpg" alt="Film 16"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 16</h4>
+                            <p>Année de création : 1988</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 17 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/hostel-2005-thriller.jpg" alt="Film 17"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 17</h4>
+                            <p>Année de création : 1986</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 18 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/inception-2010-scifi.jpg" alt="Film 18"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 18</h4>
+                            <p>Année de création : 1984</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div
+            style="display:flex; border-left:3px solid red; height:40px; align-items:center; margin-top:20px; margin-left:60px">
+            <p style="padding-left:20px; padding-top:15px; font-size:2em;">SHOP MOVIES</p>
+        </div>
+
+        <div class="div1">
+            <div
+                style="background-color: #ff0000; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center;color:white">
+                All</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
+                Action</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
+                Policiers</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
             </div>
         </div>
 
-        <div class="card" style="width: 13rem;">
-            <img src="img/intouchables-2011-comedie.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!--troisième ligne de vidéo-->
+
+        <div class="container" style="background-color: #f2f2f2; height: auto;">
+            <!-- ligne de 6 vidéos chacune -->
+            <section>
+                <!-- Première ligne de 6 vidéos -->
+                <div class="row row-nowrap">
+                    <!-- Image 7 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/Survivestyle5-2004-comedie.jpg" alt="Film 7"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 7</h4>
+                            <p>Année de création : 2006</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 8 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/batmanmovie-2017-comedie.jpg" alt="Film 8"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 8</h4>
+                            <p>Année de création : 2004</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 9 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/Survivestyle5-2004-comedie.jpg" alt="Film 9"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 9</h4>
+                            <p>Année de création : 2002</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 10 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/thefall-2006-dramatique.jpg" alt="Film 10"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 10</h4>
+                            <p>Année de création : 2000</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 11 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/lesdeuxtours-2002-aventure.jpg" alt="Film 11"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 11</h4>
+                            <p>Année de création : 1998</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 12 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/Survivestyle5-2004-comedie.jpg" alt="Film 12"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 12</h4>
+                            <p>Année de création : 1996</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deuxième ligne de 6 vidéos -->
+                <div class="row row-nowrap mt-4">
+                    <!-- Image 13 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/starwarsempire-1980-scifi.jpg" alt="Film 13"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 13</h4>
+                            <p>Année de création : 1994</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 14 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/lepatientanglais-1996-dramatique.jpg" alt="Film 14"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 14</h4>
+                            <p>Année de création : 1992</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 15 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/shutterisland-2010-thriller.jpg" alt="Film 15"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 15</h4>
+                            <p>Année de création : 1990</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 16 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/intouchables-2011-comedie.jpg" alt="Film 16"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 16</h4>
+                            <p>Année de création : 1988</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 17 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/hostel-2005-thriller.jpg" alt="Film 17"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 17</h4>
+                            <p>Année de création : 1986</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 18 -->
+                    <div class="col">
+                        <div class="video-container">
+                            <img src="img/inception-2010-scifi.jpg" alt="Film 18"
+                                onclick="loadYouTubeVideo(this)">
+                            <iframe class="youtubeVideo" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <button class="close-button" onclick="closeYouTubeVideo(this)">×</button>
+                        </div>
+                        <div class="film-description">
+                            <h4>Film 18</h4>
+                            <p>Année de création : 1984</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="div1">
+            <div
+                style="background-color: #ff0000; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center;color:white">
+                All</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
+                Action</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
+                Policiers</div>
+            <div
+                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
             </div>
         </div>
-    </div>
-</div>
+        <!--dernieres vidéos-->
 
+        <div class="container mt-5" style="height: auto;">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="row">
+                        <!-- Répéter les vidéos -->
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img src="img/zoolander-2001-comedie.jpg" alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img src="img/seven-1995-thriller.jpg" alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img src="img/lepatientanglais-1996-dramatique.jpg" alt="Cliquez pour charger la vidéo" class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img src="img/shutterisland-2010-thriller.jpg" alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img src="img/shutterisland-2010-thriller.jpg" alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img src="img/zoolander-2001-comedie.jpg" alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img src="img/thefall-2006-dramatique.jpg" alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="video-container">
+                                <img src="img/swissarmyman-2016-comedie.jpg" alt="Cliquez pour charger la vidéo"
+                                    class="video-thumbnail"
+                                    data-iframe='<iframe width="320" height="320" src="https://www.youtube.com/embed/klEy2H9VIQo?si=ckqpY4pRQJ8uz3Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Div pour afficher les iframes -->
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="iframe-display">
+                        <div class="iframe-container">
+                            <!-- Bouton pour fermer la vidéo -->
+                            <button class="close-button">Fermer la vidéo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Box de mise en garde pour les cookies -->
+        <div class="cookie-box">
+            <p>Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre
+                utilisation
+                des cookies.</p>
+            <button class="btn btn-primary" onclick="acceptCookies()">Accepter</button>
+            <button class="btn btn-secondary" onclick="declineCookies()">Refuser</button>
+        </div>
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        // Fonction pour charger la vidéo YouTube
+        function loadYouTubeVideo(element) {
+            const container = element.parentElement;
+            const iframe = container.querySelector('iframe');
+            const closeButton = container.querySelector('.close-button');
 
+            // Remplacer l'image par l'iframe YouTube
+            iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"; // Remplacez par l'URL de votre vidéo
+            iframe.style.display = 'block';
+            element.style.display = 'none'; // Masquer l'image
+            closeButton.style.display = 'block'; // Afficher le bouton de fermeture
+        }
+
+        // Fonction pour fermer la vidéo YouTube
+        function closeYouTubeVideo(element) {
+            const container = element.parentElement;
+            const iframe = container.querySelector('iframe');
+            const img = container.querySelector('img');
+
+            // Revenir à l'image
+            iframe.src = ""; // Arrêter la vidéo en supprimant l'URL
+            iframe.style.display = 'none';
+            img.style.display = 'block'; // Afficher l'image
+            element.style.display = 'none'; // Masquer le bouton de fermeture
+        }
+
+        // Sélectionner les éléments
+        const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+        const iframeContainer = document.querySelector('.iframe-container');
+        const closeButton = document.querySelector('.close-button');
+
+        // Ajouter un écouteur d'événement au clic sur chaque image
+        videoThumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                // Récupérer l'iframe depuis l'attribut data-iframe
+                const iframeHTML = thumbnail.getAttribute('data-iframe');
+
+                // Charger l'iframe dans le conteneur
+                iframeContainer.innerHTML = iframeHTML + closeButton.outerHTML;
+
+                // Afficher le conteneur de l'iframe et le bouton "Fermer"
+                iframeContainer.style.display = 'block';
+            });
+        });
+
+        // Ajouter un écouteur d'événement au clic sur le bouton "Fermer"
+        document.addEventListener('click', (event) => {
+            if (event.target.classList.contains('close-button')) {
+                // Masquer l'iframe et le bouton
+                iframeContainer.style.display = 'none';
+                iframeContainer.innerHTML = ''; // Réinitialiser le contenu
+            }
+        });
+
+        // Gestion des cookies
+        function acceptCookies() {
+            document.querySelector('.cookie-box').style.display = 'none';
+            alert("Vous avez accepté les cookies.");
+        }
+
+        function declineCookies() {
+            document.querySelector('.cookie-box').style.display = 'none';
+            alert("Vous avez refusé les cookies.");
+        }
+    </script>
 </body>
 
 </html>
