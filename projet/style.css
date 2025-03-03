@@ -342,3 +342,145 @@
     overflow-x: auto;
     /* Ajouter un défilement horizontal si nécessaire */
 }
+
+
+.subscribe-section {
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.subscribe-section h3 {
+    color: #ff3b30;
+    margin-bottom: 20px;
+}
+
+.btn-subscribe {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+}
+
+.footer-section {
+    background-color: #000;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-category h4 {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ff3b30;
+}
+
+.review-tags {
+    margin: 10px 0;
+}
+
+.review-tags span {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.latest-movie {
+    margin-bottom: 15px;
+    background-color: #333;
+    padding: 10px;
+}
+
+.latest-movie-title {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.social-connect {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-connect h4 {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: #ff3b30;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+
+    color: rgb(247, 10, 10);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 8;
+}
+
+.scroll-top:hover {
+    opacity: 3;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

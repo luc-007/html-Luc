@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de frappe de lettres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .game-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .letter {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+            animation: pop 0.3s ease;
+        }
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .score {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #333;
+        }
+        .instructions {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        .timer {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #d9534f;
+        }
+        .message {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .message.win {
+            color: #5cb85c;
+        }
+        .message.lose {
+            color: #d9534f;
+        }
+        .feedback {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: bold;
+            animation: fade 1s ease;
+        }
+        @keyframes fade {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jeu de frappe de lettres</h1>
+        <div class="letter" id="letterDisplay">Appuyez sur Espace pour commencer</div>
+        <div class="score" id="scoreDisplay">Score : 0</div>
+        <div class="timer" id="timerDisplay">Temps restant : 15s</div>
+        <div class="instructions">Appuyez sur la touche correspondante à la lettre affichée.</div>
+        <div class="feedback" id="feedbackDisplay"></div>
+        <div class="message" id="messageDisplay"></div>
+    </div>
+
+    <script>
+        // Éléments du DOM
+        const letterDisplay = document.getElementById('letterDisplay');
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const timerDisplay = document.getElementById('timerDisplay');
+        const messageDisplay = document.getElementById('messageDisplay');
+        const feedbackDisplay = document.getElementById('feedbackDisplay');
+
+        // Variables du jeu
+        let score = 0;
+        let currentLetter = '';
+        let gameStarted = false;
+        let timer;
+        let timeLeft = 15;
+
+        // Générer une lettre aléatoire
+        function generateRandomLetter() {
+            const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            return alphabet[Math.floor(Math.random() * alphabet.length)];
+        }
+
+        // Démarrer le jeu
+        function startGame() {
+            if (!gameStarted) {
+                gameStarted = true;
+                score = 0;
+                timeLeft = 15;
+                scoreDisplay.textContent = 'Score : 0';
+                timerDisplay.textContent = 'Temps restant : 15s';
+                messageDisplay.textContent = '';
+                feedbackDisplay.textContent = '';
+                nextLetter();
+                startTimer();
+            }
+        }
+
+        // Afficher la prochaine lettre
+        function nextLetter() {
+            currentLetter = generateRandomLetter();
+            letterDisplay.textContent = currentLetter;
+            resetTimer();
+        }
+
+        // Démarrer le chronomètre
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                timerDisplay.textContent = `Temps restant : ${timeLeft}s`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    losePoint();
+                }
+            }, 1000);
+        }
+
+        // Réinitialiser le chronomètre
+        function resetTimer() {
+            clearInterval(timer);
+            timeLeft = 15;
+            timerDisplay.textContent = 'Temps restant : 15s';
+            startTimer();
+        }
+
+        // Perdre un point
+        function losePoint() {
+            if (score > 0) {
+                score--;
+                scoreDisplay.textContent = `Score : ${score}`;
+            } else {
+                score = 0;
+                scoreDisplay.textContent = 'Score : 0';
+            }
+
+            if (score === 0) {
+                endGame("Vous avez perdu !");
+            } else {
+                nextLetter();
+            }
+        }
+
+        // Terminer le jeu
+        function endGame(message) {
+            clearInterval(timer); // Arrêter le chronomètre
+            timeLeft = 0; // Forcer le chronomètre à 0
+            timerDisplay.textContent = 'Temps restant : 0s'; // Afficher 0s
+            gameStarted = false;
+            letterDisplay.textContent = "Appuyez sur Espace pour recommencer";
+            messageDisplay.textContent = message;
+            messageDisplay.className = message.includes("gagné") ? "message win" : "message lose";
+        }
+
+        // Afficher un feedback (bonne ou mauvaise réponse)
+        function showFeedback(message, isCorrect) {
+            feedbackDisplay.textContent = message;
+            feedbackDisplay.style.color = isCorrect ? "#5cb85c" : "#d9534f";
+            feedbackDisplay.style.animation = "fade 1s ease";
+            setTimeout(() => {
+                feedbackDisplay.textContent = '';
+            }, 1000);
+        }
+
+        // Vérifier la touche pressée
+        document.addEventListener('keydown', (event) => {
+            if (event.code === 'Space' && !gameStarted) {
+                startGame();
+            } else if (gameStarted) {
+                if (event.key.toUpperCase() === currentLetter) {
+                    score++;
+                    scoreDisplay.textContent = `Score : ${score}`;
+                    showFeedback("Bonne réponse !", true);
+
+                    if (score === 100) {
+                        endGame("Vous avez gagné !");
+                    } else {
+                        nextLetter();
+                    }
+                } else {
+                    if (score > 0) {
+                        score--;
+                        scoreDisplay.textContent = `Score : ${score}`;
+                    } else {
+                        score = 0;
+                        scoreDisplay.textContent = 'Score : 0';
+                    }
+                    showFeedback("Mauvaise réponse !", false);
+
+                    if (score === 0) {
+                        endGame("Vous avez perdu !");
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
