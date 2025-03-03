@@ -1140,6 +1140,13 @@
                     });
                 });
             });
+
+            // Afficher tous les films par défaut
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.filter-item').forEach(item => {
+                    item.style.display = 'block';
+                });
+            });
         </script>
 </body>
 
