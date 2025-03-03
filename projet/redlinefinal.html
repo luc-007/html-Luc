@@ -346,9 +346,9 @@
         </div>
     </div>
         <div class="container">
-            <div class="row row-nowrap">
+            <div class="row row-nowrap filterable">
                 <!-- Image 1 -->
-                <div class="col">
+                <div class="col filter-item action">
                     <div class="video-container">
                         <img src="img/shutterisland-2010-thriller.jpg" alt="Film 1" onclick="loadYouTubeVideo(this)">
                         <iframe class="youtubeVideo" src="" frameborder="0"
@@ -363,7 +363,7 @@
                 </div>
 
                 <!-- Image 2 -->
-                <div class="col">
+                <div class="col filter-item drama">
                     <div class="video-container">
                         <img src="img/thefall-2006-dramatique.jpg" alt="Film 2" onclick="loadYouTubeVideo(this)">
                         <iframe class="youtubeVideo" src="" frameborder="0"
@@ -378,7 +378,7 @@
                 </div>
 
                 <!-- Image 3 -->
-                <div class="col">
+                <div class="col filter-item action">
                     <div class="video-container">
                         <img src="img/shutterisland-2010-thriller.jpg" alt="Film 3" onclick="loadYouTubeVideo(this)">
                         <iframe class="youtubeVideo" src="" frameborder="0"
@@ -393,7 +393,7 @@
                 </div>
 
                 <!-- Image 4 -->
-                <div class="col">
+                <div class="col filter-item drama">
                     <div class="video-container">
                         <img src="img/starwarsempire-1980-scifi.jpg" alt="Film 4" onclick="loadYouTubeVideo(this)">
                         <iframe class="youtubeVideo" src="" frameborder="0"
@@ -408,7 +408,7 @@
                 </div>
 
                 <!-- Image 5 -->
-                <div class="col">
+                <div class="col filter-item action">
                     <div class="video-container">
                         <img src="img/starwarsempire-1980-scifi.jpg" alt="Film 5" onclick="loadYouTubeVideo(this)">
                         <iframe class="youtubeVideo" src="" frameborder="0"
@@ -423,7 +423,7 @@
                 </div>
 
                 <!-- Image 6 -->
-                <div class="col">
+                <div class="col filter-item drama">
                     <div class="video-container">
                         <img src="img/swissarmyman-2016-comedie.jpg" alt="Film 6" onclick="loadYouTubeVideo(this)">
                         <iframe class="youtubeVideo" src="" frameborder="0"
@@ -1126,6 +1126,20 @@
                 document.querySelector('.cookie-box').style.display = 'none';
                 alert("Vous avez refusé les cookies.");
             }
+
+            // Filtre des films
+            document.querySelectorAll('.filter-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    document.querySelectorAll('.filter-item').forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
         </script>
 </body>
 
