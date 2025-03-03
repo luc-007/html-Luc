@@ -337,22 +337,14 @@
             style="display:flex; border-left:3px solid red; height:40px; align-items:center; margin-top:20px; margin-left:60px">
             <p style="padding-left:20px; padding-top:15px; font-size:2em;">FEATURED MOVIES</p>
         </div>
-
-        <div class="div1">
-            <div
-                style="background-color: #ff0000; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center;color:white">
-                All</div>
-            <div
-                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
-                Action</div>
-            <div
-                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
-                Policiers</div>
-            <div
-                style="background-color: #cccaca; padding: 2px; width:60px;margin-right:5px; display:flex; align-items:center; justify-content:center">
-            </div>
+        
+    <div style="margin-left:100px; width:auto">
+        <div class="col-12 mb-4">
+            <button class="btn btn-outline-primary me-2 filter-button" data-filter="all">All</button>
+            <button class="btn btn-outline-primary me-2 filter-button" data-filter="action">Actions</button>
+            <button class="btn btn-outline-primary me-2 filter-button" data-filter="drama">Policiers</button>
         </div>
-
+    </div>
         <div class="container">
             <div class="row row-nowrap">
                 <!-- Image 1 -->
@@ -986,74 +978,77 @@
             </div>
         </div>
 
-    <!-- Bouton pour ouvrir le formulaire de contact -->
-    <div class="container mt-5" style="display: flex; justify-content:flex-start; width:auto; height:auto; background-color:white">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal"style="background-color: white; border-left: 5px solid red;color:black; font-size:2em; text-transform:uppercase">
-            Contact
-        </button>
-    </div>
+        <!-- Bouton pour ouvrir le formulaire de contact -->
+        <div class="container mt-5"
+            style="display: flex; justify-content:flex-start; width:auto; height:auto; background-color:white">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal"
+                style="background-color: white; border-left: 5px solid red;color:black; font-size:2em; text-transform:uppercase">
+                Contact
+            </button>
+        </div>
 
-    <!-- Modal pour le formulaire de contact -->
-    <div class="modal fade" id="contactModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Formulaire de contact -->
-                    <form>
-                        <!-- Première ligne : FIRST NAME et LAST NAME -->
-                        <div class="row mb-3">
-                            <div class="col">
-                                <label for="firstName" class="form-label"></label>
-                                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+        <!-- Modal pour le formulaire de contact -->
+        <div class="modal fade" id="contactModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Formulaire de contact -->
+                        <form>
+                            <!-- Première ligne : FIRST NAME et LAST NAME -->
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="firstName" class="form-label"></label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name"
+                                        required>
+                                </div>
+                                <div class="col">
+                                    <label for="lastName" class="form-label"></label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name"
+                                        required>
+                                </div>
                             </div>
-                            <div class="col">
-                                <label for="lastName" class="form-label"></label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-                            </div>
-                        </div>
 
-                        <!-- Deuxième ligne : EMAIL et SUBJECT -->
-                        <div class="row mb-3">
-                            <div class="col">
-                                <label for="email" class="form-label"></label>
-                                <input type="email" class="form-control" id="email" placeholder="Email"
-                                    required>
+                            <!-- Deuxième ligne : EMAIL et SUBJECT -->
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="email" class="form-label"></label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                </div>
+                                <div class="col">
+                                    <label for="subject" class="form-label"></label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                </div>
                             </div>
-                            <div class="col">
-                                <label for="subject" class="form-label"></label>
-                                <input type="text" class="form-control" id="subject"
-                                    placeholder="Subject" required>
-                            </div>
-                        </div>
 
-                        <!-- Champ pour le message -->
-                        <div class="mb-3">
-                            <label for="message" class="form-label"></label>
-                            <textarea class="form-control" id="message" rows="5"
-                                placeholder="your message" required></textarea>
-                        </div>
-                        <!-- Bouton pour soumettre le formulaire -->
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                    </form>
+                            <!-- Champ pour le message -->
+                            <div class="mb-3">
+                                <label for="message" class="form-label"></label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="your message"
+                                    required></textarea>
+                            </div>
+                            <!-- Bouton pour soumettre le formulaire -->
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <div style="background-color: black; height: auto; justify-content:center">
-            <p style="color: white;">SUBSCRIBRE TO US</p>
-            <form class="d-flex search-form" role="search">
-                <input class="form-control me-2" type="search" placeholder="Entrez votre Email" aria-label="Search">
-                <button class="btn btn-outline-warning" type="submit" style="background-color: red; color:white; text-transform:uppercase; font-size:1em">Subscribe</button>
-            </form>
-        </div>
+        <footer>
+            <div style="background-color: black; height: auto; justify-content:center">
+                <p style="color: white;">SUBSCRIBRE TO US</p>
+                <form class="d-flex search-form" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Entrez votre Email" aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit"
+                        style="background-color: red; color:white; text-transform:uppercase; font-size:1em">Subscribe</button>
+                </form>
+            </div>
 
-        
-    </footer>
+
+        </footer>
         <!-- Box de mise en garde pour les cookies -->
         <div class="cookie-box">
             <p>Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre
