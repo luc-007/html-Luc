@@ -1,0 +1,67 @@
+/* style de base*/
+body {
+    display: flex;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    width: 200px;
+    background-color: #dddada;
+    padding: 20px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    color: rgb(3, 0, 0);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.burger {
+    display: block;
+}
+
+/* Styles pour le bouton burger */
+
+.burger {
+    display: block;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 28px;
+    height: 3px;
+    margin: 4px;
+    background-color: azure;
+    transition: all 0.3s ease;
+}
+
+#burger-toggle {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .burger {
+        display: block; /* Modifier de 'none' à 'block' */
+    }
+}
